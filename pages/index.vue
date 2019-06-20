@@ -3,7 +3,7 @@
         <div class="header">
             <Menus></Menus>
             <div class="banner">
-                {{qiniu}}
+                {{qiniu.data}}
             </div>
         </div>
     </section>
@@ -14,8 +14,7 @@
         Component,
         Vue
     } from "nuxt-property-decorator"
-    import {State, Action} from 'vuex-class'
-    import {Fetch} from "~/types";
+    import {Action} from 'vuex-class'
     import Menus from "~/components/Menus.vue"
 
     @Component({
