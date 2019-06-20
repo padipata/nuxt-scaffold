@@ -1,6 +1,6 @@
 # nuxt-scaffold
 
-> Nuxt.js TypeScript ?????
+> Nuxt.js TypeScript 开发脚手架
 
 ## Build Setup
 
