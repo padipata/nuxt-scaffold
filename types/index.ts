@@ -1,5 +1,4 @@
-export * from './state';
-
-export interface Data {
-    data: Object;
+export interface Fetch {
+    list: any
+    pagination: any
 }

@@ -2,7 +2,9 @@
     <section>
         <div class="header">
             <Menus></Menus>
-            <div class="banner"></div>
+            <div class="banner">
+                {{qiniu}}
+            </div>
         </div>
     </section>
 </template>
@@ -12,13 +14,8 @@
         Component,
         Vue
     } from "nuxt-property-decorator"
-    import {
-        State,
-        Getter,
-        Action,
-        Mutation
-    } from 'vuex-class'
-    import {Data} from "~/types";
+    import {State, Action} from 'vuex-class'
+    import {Fetch} from "~/types";
     import Menus from "~/components/Menus.vue"
 
     @Component({
@@ -28,10 +25,17 @@
     })
 
     export default class extends Vue {
-        @State private data !: Data
+        private qiniu: any = {};
+
+        @Action getQiniu !: Function;
+
+        private async getQiu_yp() {
+            this.qiniu = await this.getQiniu();
+            console.log(this.qiniu.data.token, 'test')
+        }
 
         private created() {
-            console.log(this.data);
+            this.getQiu_yp();
         }
     }
 </script>

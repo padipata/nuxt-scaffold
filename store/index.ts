@@ -1,4 +1,4 @@
-import request from '~/assets/utils/axios'
+import {getQiniu} from '~/assets/utils/api'
 
 import {
     MutationTree,
@@ -6,32 +6,35 @@ import {
     Commit,
     GetterTree
 } from "vuex";
-import {RootState, Data} from "~/types";
+import {Fetch} from "~/types";
 
-export const state = (): RootState => ({
-    data: {data: Object}
-})
+export const state = (): Fetch => ({
+    list: {},
+    pagination: {}
+});
 
-export const mutations: MutationTree<RootState> = {
-    setData(state: RootState, data: Data): void {
-        state.data = data
+export const mutations: MutationTree<Fetch> = {
+    setFetch(state: Fetch, payload: any): void {
+        state.list = payload || {};
+        state.pagination = payload.pagination || {}
     }
-}
+};
 
-export const actions: ActionTree<RootState, RootState> = {
+export const actions: ActionTree<Fetch, any> = {
     async getQiniu(context: { commit: Commit }, payload: any) {
         try {
-            const response = await request.get('/qiniu')
-            const data = response.data
-            context.commit('setData', data)
+            const response = await getQiniu(payload);
+            const data = response.data;
+            context.commit('setFetch', data);
             return data
         } catch (error) {
-            context.commit('setData', [])
+            context.commit('setFetch', []);
             throw error
         }
     }
-}
+};
 
-export const getters: GetterTree<RootState, any> = {
-    data: (state: RootState) => state.data
-}
+export const getters: GetterTree<Fetch, any> = {
+    list: (state: Fetch) => state.list,
+    pagination: (state: Fetch) => state.pagination
+};
