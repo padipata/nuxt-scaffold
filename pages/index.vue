@@ -12,6 +12,7 @@
 <script lang="ts">
     import {
         Component,
+        Watch,
         Vue
     } from "nuxt-property-decorator"
     import {Action} from 'vuex-class'
@@ -35,6 +36,13 @@
 
         private created() {
             this.getQiu_yp();
+        }
+
+        // 如果 `qiniu` 发生改变，下面方法就会运行
+        @Watch('qiniu', {immediate: true, deep: true})
+        private onPersonChanged(val: any, oldVal: any) {
+            console.log(val, 'val');
+            console.log(oldVal, 'oldVal');
         }
     }
 </script>

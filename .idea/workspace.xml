@@ -31,8 +31,8 @@
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="301">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="16" />
               <folding>
                 <element signature="e#231#307#0" expanded="true" />
               </folding>
@@ -232,12 +232,12 @@
       <updated>1560958302670</updated>
       <workItem from="1560958308438" duration="18597000" />
       <workItem from="1561046629644" duration="147000" />
-      <workItem from="1561047318038" duration="6366000" />
+      <workItem from="1561047318038" duration="9160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25110000" />
+    <option name="totallyTimeSpent" value="27904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="829" extended-state="0" />
@@ -527,8 +527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="301">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="16" />
           <folding>
             <element signature="e#231#307#0" expanded="true" />
           </folding>
