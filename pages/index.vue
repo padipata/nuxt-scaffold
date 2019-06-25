@@ -5,6 +5,7 @@
             <div class="banner">
                 {{qiniu.data}}
             </div>
+            <Skeleton></Skeleton>
         </div>
     </section>
 </template>
@@ -17,10 +18,12 @@
     } from "nuxt-property-decorator"
     import {Action} from 'vuex-class'
     import Menus from "~/components/Menus.vue"
+    import Skeleton from "~/components/skeleton/Skeleton.vue"
 
     @Component({
         components: {
-            Menus
+            Menus,
+            Skeleton
         }
     })
 

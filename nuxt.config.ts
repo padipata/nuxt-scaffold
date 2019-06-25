@@ -1,4 +1,6 @@
 export default {
+    mode: 'universal',
+    modern: true, // 编译为现代 ES Module，并自动分辨浏览器输出
     env: {},
     head: {
         title: "深圳市一页科技有限公司",
